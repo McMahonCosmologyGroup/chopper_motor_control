@@ -1,0 +1,16 @@
+﻿  motion_example.cpp
+C:\Users\becja\Desktop\motor_sandbox\motor_sandbox\motion_example.cpp(121,28): warning C4477: 'printf' : format string '%i' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+C:\Users\becja\Desktop\motor_sandbox\motor_sandbox\motion_example.cpp(121,28): message : consider using '%zi' in the format string
+C:\Users\becja\Desktop\motor_sandbox\motor_sandbox\motion_example.cpp(126,20): warning C4477: 'printf' : format string '%i' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+C:\Users\becja\Desktop\motor_sandbox\motor_sandbox\motion_example.cpp(126,20): message : consider using '%zi' in the format string
+C:\Users\becja\Desktop\motor_sandbox\motor_sandbox\motion_example.cpp(170,24): warning C4477: 'printf' : format string '%i' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+C:\Users\becja\Desktop\motor_sandbox\motor_sandbox\motion_example.cpp(170,24): message : consider using '%zi' in the format string
+C:\Users\becja\Desktop\motor_sandbox\motor_sandbox\motion_example.cpp(172,46): warning C4244: 'argument': conversion from 'float' to 'int32_t', possible loss of data
+C:\Users\becja\Desktop\motor_sandbox\motor_sandbox\motion_example.cpp(174,24): warning C4477: 'printf' : format string '%f' requires an argument of type 'double', but variadic argument 1 has type 'sFnd::ValueDouble'
+C:\Users\becja\Desktop\motor_sandbox\motor_sandbox\motion_example.cpp(175,95): warning C4244: 'argument': conversion from 'float' to 'int32_t', possible loss of data
+C:\Users\becja\Desktop\motor_sandbox\motor_sandbox\motion_example.cpp(184,24): warning C4477: 'printf' : format string '%i' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+C:\Users\becja\Desktop\motor_sandbox\motor_sandbox\motion_example.cpp(184,24): message : consider using '%zi' in the format string
+  motor_sandbox.vcxproj -> C:\Users\becja\Desktop\motor_sandbox\x64\Debug\motor_sandbox.exe
+  Copying sFoundation20.dll
+  C:\Program Files (x86)\Teknic\ClearView\sdk\lib\win\Release\x64\sFoundation20.dll
+  1 File(s) copied

@@ -24,11 +24,16 @@ while True:
     client, address = s.accept()
     print("Client accepted")
     while True:
-        #data = client.recv(size).rstrip()
-        data = client.recv(size).rstrip()
-        data = json.loads(data)
-        #if 'error' in resp:
-         #   raise Exception(resp['error'])
+        try:
+            #data = client.recv(size).rstrip()
+            data = client.recv(size).rstrip()
+            data = json.loads(data)
+            #if 'error' in resp:
+             #   raise Exception(resp['error'])
+        except:
+            print("Bad Data, ignoring")
+            continue
+            
         if not data:
             continue
         print("Received command: {}".format(data) )
@@ -42,9 +47,24 @@ while True:
             client.send(data)
             client.close()
         
+        if 'vel' not in data:
+            resp = {'resp': "Badly formed request, missing 'vel' field"}
+            msg = json.dumps(resp)
+            msg = bytes(msg,'utf-8')
+            client.sendall(msg)
+            continue
+        elif 'time' not in data:
+            resp = {'resp': "Badly formed request, missing 'time' field"}
+            msg = json.dumps(resp)
+            msg = bytes(msg,'utf-8')
+            client.sendall(msg)
+            continue
+            
         print('{} Running chopper at {} Hz for {} secs'.format(dt.datetime.now(),data['vel'], data['time']) )
         VEL = str(data['vel'])
         TIME = str(data['time'])
+        
+            
         try:
             proc = subprocess.Popen(['python',fn,VEL,TIME], stdin=subprocess.PIPE, stdout=subprocess.PIPE, 
                         stderr=subprocess.PIPE, text=True)
